@@ -10,7 +10,6 @@ class LambdaDemo extends Component {
 
   handleClick = api => e => {
     e.preventDefault()
-
     this.setState({ loading: true })
     fetch("/.netlify/functions/" + api)
       .then(response => response.json())
